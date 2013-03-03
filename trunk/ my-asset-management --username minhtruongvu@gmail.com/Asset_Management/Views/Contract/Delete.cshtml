@@ -1,0 +1,38 @@
+﻿@model Asset_Management.Models.Contract
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Contract</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">DateSigned</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateSigned)
+    </div>
+
+    <div class="display-label">SignedBy</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SignedBy)
+    </div>
+
+    <div class="display-label">PriceContract</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PriceContract)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,55 @@
+﻿@model Asset_Management.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Product</legend>
+
+    <div class="display-label">ProductName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductName)
+    </div>
+
+    <div class="display-label">OfficeID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OfficeID)
+    </div>
+
+    <div class="display-label">DateBuyed</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateBuyed)
+    </div>
+
+    <div class="display-label">InputBy</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InputBy)
+    </div>
+
+    <div class="display-label">AcceptBy</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AcceptBy)
+    </div>
+
+    <div class="display-label">PriceUnit</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PriceUnit)
+    </div>
+
+    <div class="display-label">Status</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+
+    <div class="display-label">DateExpireMaintance</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateExpireMaintance)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
