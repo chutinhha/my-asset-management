@@ -1,0 +1,35 @@
+﻿@model Asset_Management.Models.Provider
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Provider</legend>
+
+    <div class="display-label">ProviderName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProviderName)
+    </div>
+
+    <div class="display-label">Adress</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Adress)
+    </div>
+
+    <div class="display-label">Phone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">Manager</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Manager)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProviderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

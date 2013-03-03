@@ -1,0 +1,35 @@
+﻿@model Asset_Management.Models.Contract
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Contract</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">DateSigned</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateSigned)
+    </div>
+
+    <div class="display-label">SignedBy</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SignedBy)
+    </div>
+
+    <div class="display-label">PriceContract</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PriceContract)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ContractID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

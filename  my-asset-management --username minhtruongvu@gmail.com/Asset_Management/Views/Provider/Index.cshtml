@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Asset_Management.Models.Provider>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            ProviderName
+        </th>
+        <th>
+            Adress
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Manager
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProviderName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manager)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProviderID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProviderID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProviderID })
+        </td>
+    </tr>
+}
+
+</table>

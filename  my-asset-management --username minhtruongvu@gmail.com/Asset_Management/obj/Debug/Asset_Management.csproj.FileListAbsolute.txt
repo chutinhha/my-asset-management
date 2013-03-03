@@ -1,0 +1,7 @@
+c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\bin\Asset_Management.dll
+c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\bin\Asset_Management.pdb
+c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\bin\EntityFramework.dll
+c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\bin\EntityFramework.xml
+c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\obj\Debug\ResolveAssemblyReference.cache
+c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\obj\Debug\Asset_Management.dll
+c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\obj\Debug\Asset_Management.pdb
