@@ -12,10 +12,19 @@
 <table>
     <tr>
         <th>
+            ContractID
+        </th>
+        <th>
             Title
         </th>
         <th>
+            ContractNumber
+        </th>
+        <th>
             DateSigned
+        </th>
+        <th>
+            InputDate
         </th>
         <th>
             SignedBy
@@ -29,10 +38,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.ContractID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.ContractNumber)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.DateSigned)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InputDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SignedBy)

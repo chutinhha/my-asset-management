@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Web Developer Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asset_Management", "Asset_Management\Asset_Management.csproj", "{69CED356-8D3C-4D25-BC01-6F9E244B9070}"
 EndProject
 Global

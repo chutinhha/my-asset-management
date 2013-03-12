@@ -12,6 +12,9 @@
 <table>
     <tr>
         <th>
+            ProviderID
+        </th>
+        <th>
             ProviderName
         </th>
         <th>
@@ -28,6 +31,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td> 
+            @Html.DisplayFor(modelItem => item.ProviderID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.ProviderName)
         </td>

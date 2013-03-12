@@ -15,6 +15,7 @@ namespace Asset_Management.Models
         public string AcceptBy { get; set; }
         public string PriceUnit { get; set; }
         public string Status { get; set; }
+        public long SerialNumber { get; set; }
         public DateTime DateExpireMaintance { get; set; }        
         public virtual Contract Contract { get; set; }
     }
