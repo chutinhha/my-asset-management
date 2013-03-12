@@ -12,7 +12,13 @@
 <table>
     <tr>
         <th>
+            ProductID
+        </th>
+        <th>
             ProductName
+        </th>
+        <th>
+            SerialNumber
         </th>
         <th>
             OfficeID
@@ -41,7 +47,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.ProductID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SerialNumber)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.OfficeID)

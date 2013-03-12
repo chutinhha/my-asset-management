@@ -25,22 +25,22 @@ namespace Asset_Management.DAL
             var products = new List<Product> 
             { 
                 new Product {ProductName = "PC core i3", DateBuyed = DateTime.Parse("03-03-2013"), DateExpireMaintance = DateTime.Parse("03-03-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0001", PriceUnit = "12trieu", Status = "Warranty",},
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0001", PriceUnit = "12trieu", Status = "Warranty",SerialNumber = 120320139999},
                 new Product {ProductName = "PC core i5", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0002", PriceUnit = "14trieu", Status = "Warranty",},
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0002", PriceUnit = "14trieu", Status = "Warranty",SerialNumber = 120320139998},
                 new Product {ProductName = "PC core i7", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0003", PriceUnit = "16trieu", Status = "Warranty",},
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0003", PriceUnit = "16trieu", Status = "Warranty",SerialNumber = 120320139997},
                 new Product {ProductName = "Lap", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0004", PriceUnit = "20trieu", Status = "out of Warranty",}
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0004", PriceUnit = "20trieu", Status = "out of Warranty",SerialNumber = 120320139996}
             };
             products.ForEach(s => context.Products.Add(s));
             context.SaveChanges();
 
             var contracts = new List<Contract>
             {
-                new Contract {DateSigned = DateTime.Parse("02-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013" },
-                new Contract {DateSigned = DateTime.Parse("02-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013" },
-                new Contract {DateSigned = DateTime.Parse("02-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013" }
+                new Contract {DateSigned = DateTime.Parse("02-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD12032013", InputDate = DateTime.Parse("02-03-2013") },
+                new Contract {DateSigned = DateTime.Parse("12-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD13042011", InputDate = DateTime.Parse("02-03-2013") },
+                new Contract {DateSigned = DateTime.Parse("12-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD14052012", InputDate = DateTime.Parse("02-03-2013") }
             };
             contracts.ForEach(s => context.Contracts.Add(s));
             context.SaveChanges();

@@ -5,3 +5,9 @@ c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asse
 c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\obj\Debug\ResolveAssemblyReference.cache
 c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\obj\Debug\Asset_Management.dll
 c:\users\minh truong\documents\visual studio 2010\Projects\Asset_Management\Asset_Management\obj\Debug\Asset_Management.pdb
+D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\bin\Asset_Management.dll
+D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\bin\Asset_Management.pdb
+D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\bin\EntityFramework.dll
+D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\bin\EntityFramework.xml
+D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\obj\Debug\Asset_Management.dll
+D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\obj\Debug\Asset_Management.pdb
