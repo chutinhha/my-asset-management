@@ -47,9 +47,9 @@ namespace Asset_Management.DAL
 
             var maintenance = new List<Maintenance>
             {
-                new Maintenance {PriceMaintenance = "50 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("01-09-2013") },
-                new Maintenance {PriceMaintenance = "35 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("01-09-2013") },
-                new Maintenance {PriceMaintenance = "19 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("01-09-2013") }
+                new Maintenance {PriceMaintenance = "50 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") },
+                new Maintenance {PriceMaintenance = "35 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") },
+                new Maintenance {PriceMaintenance = "19 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") }
             };
             maintenance.ForEach(s => context.Maintenances.Add(s));
             context.SaveChanges();
