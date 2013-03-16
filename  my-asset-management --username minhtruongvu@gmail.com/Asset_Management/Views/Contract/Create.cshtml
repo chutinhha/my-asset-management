@@ -46,6 +46,23 @@
             @Html.ValidationMessageFor(model => model.PriceContract)
         </div>
 
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ContractNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContractNumber)
+            @Html.ValidationMessageFor(model => model.ContractNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InputDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.InputDate)
+            @Html.ValidationMessageFor(model => model.InputDate)
+        </div>
+
+
         <p>
             <input type="submit" value="Create" />
         </p>
