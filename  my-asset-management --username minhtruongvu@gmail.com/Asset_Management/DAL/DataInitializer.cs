@@ -13,25 +13,25 @@ namespace Asset_Management.DAL
         {
             var providers = new List<Provider>
             {
-                new Provider {ProviderName = "FPT", Adress = "Quan 1, HCMC", Manager = "Nguyen Van A", Phone = "090123456"},
-                new Provider {ProviderName = "Vietel", Adress = "Quan 3, HCMC", Manager = "Nguyen Van B", Phone = "090123457"},
-                new Provider {ProviderName = "VNPT", Adress = "Quan 5, HCMC", Manager = "Nguyen Van C", Phone = "090123458"},
-                new Provider {ProviderName = "Oracle", Adress = "Quan 7, HCMC", Manager = "Nguyen Van D", Phone = "090123459"},
-                new Provider {ProviderName = "IBM", Adress = "Quan 8, HCMC", Manager = "Nguyen Van E", Phone = "090123450"}
+                new Provider {ProviderName = "FPT", Address = "Quan 1, HCMC", Manager = "Nguyen Van A", Phone = "090123456"},
+                new Provider {ProviderName = "Vietel", Address = "Quan 3, HCMC", Manager = "Nguyen Van B", Phone = "090123457"},
+                new Provider {ProviderName = "VNPT", Address = "Quan 5, HCMC", Manager = "Nguyen Van C", Phone = "090123458"},
+                new Provider {ProviderName = "Oracle", Address = "Quan 7, HCMC", Manager = "Nguyen Van D", Phone = "090123459"},
+                new Provider {ProviderName = "IBM", Address = "Quan 8, HCMC", Manager = "Nguyen Van E", Phone = "090123450"}
             };
             providers.ForEach(s => context.Providers.Add(s));
             context.SaveChanges();
 
             var products = new List<Product> 
             { 
-                new Product {ProductName = "PC core i3", DateBuyed = DateTime.Parse("03-03-2013"), DateExpireMaintance = DateTime.Parse("03-03-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0001", PriceUnit = "12trieu", Status = "Warranty",SerialNumber = 120320139999},
-                new Product {ProductName = "PC core i5", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0002", PriceUnit = "14trieu", Status = "Warranty",SerialNumber = 120320139998},
-                new Product {ProductName = "PC core i7", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0003", PriceUnit = "16trieu", Status = "Warranty",SerialNumber = 120320139997},
-                new Product {ProductName = "Lap", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = "0004", PriceUnit = "20trieu", Status = "out of Warranty",SerialNumber = 120320139996}
+                new Product {ProductName = "PC core i3", DateBuyed = DateTime.Parse("03-03-2013"), DateExpireMaintenance = DateTime.Parse("03-03-2014"), 
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 110, PriceUnit = "12trieu", Status = "Warranty",SerialNumber = 120320139999},
+                new Product {ProductName = "PC core i5", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintenance = DateTime.Parse("04-04-2014"), 
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 120, PriceUnit = "14trieu", Status = "Warranty",SerialNumber = 120320139998},
+                new Product {ProductName = "PC core i7", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintenance = DateTime.Parse("04-04-2014"), 
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 130, PriceUnit = "16trieu", Status = "Warranty",SerialNumber = 120320139997},
+                new Product {ProductName = "Lap", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintenance = DateTime.Parse("04-04-2014"), 
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 140, PriceUnit = "20trieu", Status = "out of Warranty",SerialNumber = 120320139996}
             };
             products.ForEach(s => context.Products.Add(s));
             context.SaveChanges();

@@ -15,31 +15,34 @@
             ProductID
         </th>
         <th>
-            ProductName
+            @Html.ActionLink("ProductName", "Index", new {sortOrder = ViewBag.ProductNameSortParm})
         </th>
         <th>
-            SerialNumber
+            @Html.ActionLink("SerialNumber", "Index", new {sortOrder = ViewBag.SerialNumberSortParm})
         </th>
         <th>
-            OfficeID
+            Provider
         </th>
         <th>
-            DateBuyed
+            @Html.ActionLink("OfficeID", "Index", new {sortOrder = ViewBag.OfficeIDSortParm})
         </th>
         <th>
-            InputBy
+            @Html.ActionLink("DateBuyed", "Index", new {sortOrder = ViewBag.DateBuyedSortParm})
         </th>
         <th>
-            AcceptBy
+            @Html.ActionLink("InputBy", "Index", new {sortOrder = ViewBag.InputBySortParm})
         </th>
         <th>
-            PriceUnit
+            @Html.ActionLink("AcceptBy", "Index", new {sortOrder = ViewBag.AcceptBySortParm})
         </th>
         <th>
-            Status
+            @Html.ActionLink("PriceUnit", "Index", new {sortOrder = ViewBag.PriceUnitSortParm})
         </th>
         <th>
-            DateExpireMaintance
+            @Html.ActionLink("Status", "Index", new {sortOrder = ViewBag.StatusSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("DateExpireMaintenance", "Index", new {sortOrder = ViewBag.DateExpireMaintenanceSortParm})
         </th>
         <th></th>
     </tr>
@@ -54,6 +57,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SerialNumber)
+        </td>
+        <td>
+            @Html.ActionLink("abc","index","Provider")
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.OfficeID)
@@ -74,7 +80,7 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DateExpireMaintance)
+            @Html.DisplayFor(modelItem => item.DateExpireMaintenance)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
