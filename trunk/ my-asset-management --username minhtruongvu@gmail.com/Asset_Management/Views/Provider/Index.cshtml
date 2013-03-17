@@ -15,16 +15,16 @@
             ProviderID
         </th>
         <th>
-            ProviderName
+            @Html.ActionLink("ProviderName", "Index", new { sortOrder=ViewBag.NameSortParm })
         </th>
         <th>
-            Adress
+            @Html.ActionLink("Address", "Index", new {sortOrder = ViewBag.AdressSortParm})
         </th>
         <th>
-            Phone
+            @Html.ActionLink("Phone", "Index", new {sortOrder = ViewBag.PhoneSortParm})
         </th>
         <th>
-            Manager
+            @Html.ActionLink("Manager", "Index", new {sortOrder = ViewBag.ManagerSortParm})
         </th>
         <th></th>
     </tr>
@@ -38,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.ProviderName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Adress)
+            @Html.DisplayFor(modelItem => item.Address)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Phone)

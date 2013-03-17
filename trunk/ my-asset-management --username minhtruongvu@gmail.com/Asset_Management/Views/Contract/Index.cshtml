@@ -15,22 +15,22 @@
             ContractID
         </th>
         <th>
-            Title
+            @Html.ActionLink("Title", "Index", new {sortOrder = ViewBag.TitleSortParm})
         </th>
         <th>
-            ContractNumber
+            @Html.ActionLink("ContractNumber", "Index", new {sortOrder = ViewBag.ContractNumberSortParm})
         </th>
         <th>
-            DateSigned
+            @Html.ActionLink("DateSigned", "Index", new {sortOrder = ViewBag.DateSignedSortParm})
         </th>
         <th>
-            InputDate
+            @Html.ActionLink("InputDate", "Index", new {sortOrder = ViewBag.InputDateSortParm})
         </th>
         <th>
-            SignedBy
+            @Html.ActionLink("SignedBy", "Index", new {sortOrder = ViewBag.SignedBySortParm})
         </th>
         <th>
-            PriceContract
+             @Html.ActionLink("PriceContract", "Index", new {sortOrder = ViewBag.PriceContractSortParm})
         </th>
         <th></th>
     </tr>

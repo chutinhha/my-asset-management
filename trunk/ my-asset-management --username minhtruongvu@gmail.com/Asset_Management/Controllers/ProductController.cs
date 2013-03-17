@@ -17,9 +17,70 @@ namespace Asset_Management.Controllers
         //
         // GET: /Product/
 
-        public ViewResult Index()
+        public ViewResult Index(string sortOrder)
         {
-            return View(db.Products.ToList());
+            ViewBag.ProductNameSortParm = String.IsNullOrEmpty(sortOrder) ? "ProductName desc" : "";
+            ViewBag.SerialNumberSortParm = sortOrder == "SerialNumber" ? "SerialNumber desc" : "SerialNumber";
+            ViewBag.OfficeIDSortParm = sortOrder == "OfficeID" ? "OfficeID desc" : "OfficeID";
+            ViewBag.DateBuyedSortParm = sortOrder == "DateBuyed" ? "DateBuyed desc" : "DateBuyed";
+            ViewBag.InputBySortParm = sortOrder == "InputBy" ? "InputBy desc" : "InputBy";
+            ViewBag.AcceptBySortParm = sortOrder == "AcceptBy" ? "AcceptBy desc" : "AcceptBy";
+            ViewBag.PriceUnitSortParm = sortOrder == "PriceUnit" ? "PriceUnit desc" : "PriceUnit";
+            ViewBag.StatusSortParm = sortOrder == "Status" ? "Status desc" : "Status";
+            ViewBag.DateExpireMaintenanceSortParm = sortOrder == "DateExpireMaintenance" ? "DateExpireMaintenance desc" : "DateExpireMaintenance";
+
+            var prod = from s in db.Products select s;
+
+            switch (sortOrder)
+            {
+                case "ProductName desc": prod = prod.OrderByDescending(s => s.ProductName);
+                    break;
+
+                case "SerialNumber desc": prod = prod.OrderByDescending(s => s.SerialNumber);
+                    break;
+                case "SerialNumber": prod = prod.OrderBy(s => s.SerialNumber);
+                    break;
+                
+                case "OfficeID desc": prod = prod.OrderByDescending(s => s.OfficeID);
+                    break;
+                case "OfficeID": prod = prod.OrderBy(s => s.OfficeID);
+                    break;
+                
+                case "DateBuyed desc": prod = prod.OrderByDescending(s => s.DateBuyed);
+                    break;
+                case "DateBuyed": prod = prod.OrderBy(s => s.DateBuyed);
+                    break;
+                
+                case "InputBy desc": prod = prod.OrderByDescending(s => s.InputBy);
+                    break;
+                case "InputBy": prod = prod.OrderBy(s => s.InputBy);
+                    break;
+
+                case "AcceptBy desc": prod = prod.OrderByDescending(s => s.AcceptBy);
+                    break;
+                case "AcceptBy": prod = prod.OrderBy(s => s.AcceptBy);
+                    break;
+
+                case "PriceUnit desc": prod = prod.OrderByDescending(s => s.PriceUnit);
+                    break;
+                case "PriceUnit": prod = prod.OrderBy(s => s.PriceUnit);
+                    break;
+
+                case "Status desc": prod = prod.OrderByDescending(s => s.Status);
+                    break;
+                case "Status": prod = prod.OrderBy(s => s.Status);
+                    break;
+
+                case "DateExpireMaintenance desc": prod = prod.OrderByDescending(s => s.DateExpireMaintenance);
+                    break;
+                case "DateExpireMaintenance": prod = prod.OrderBy(s => s.DateExpireMaintenance);
+                    break;
+
+                default: prod = prod.OrderBy(s => s.ProductName);
+                    break;
+            }
+
+            return View(prod.ToList());
         }
 
         //

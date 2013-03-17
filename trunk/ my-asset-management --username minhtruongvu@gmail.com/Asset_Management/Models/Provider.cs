@@ -9,7 +9,7 @@ namespace Asset_Management.Models
     {
         public int ProviderID { get; set; }
         public string ProviderName { get; set; }
-        public string Adress { get; set; }
+        public string Address { get; set; }
         public string Phone { get; set; }
         public string Manager { get; set; }
         public virtual ICollection<Contract> Contracts { get; set; }

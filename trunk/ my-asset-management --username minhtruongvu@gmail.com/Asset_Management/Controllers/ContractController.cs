@@ -17,9 +17,51 @@ namespace Asset_Management.Controllers
         //
         // GET: /Contract/
 
-        public ViewResult Index()
+        public ViewResult Index(string sortOrder)
         {
-            return View(db.Contracts.ToList());
+            ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "Title desc" : "";
+            ViewBag.ContractNumberSortParm = sortOrder == "ContractNumber" ? "ContractNumber desc" : "ContractNumber";
+            ViewBag.DateSignedSortParm = sortOrder == "DateSigned" ? "DateSigned desc" : "DateSigned";
+            ViewBag.InputDateSortParm = sortOrder == "InputDate" ? "InputDate desc" : "InputDate";
+            ViewBag.SignedBySortParm = sortOrder == "SignedBy" ? "SignedBy desc" : "SignedBy";
+            ViewBag.PriceContractSortParm = sortOrder == "PriceContract" ? "PriceContract desc" : "PriceContract";
+
+            var contr = from s in db.Contracts select s;
+
+            switch (sortOrder)
+            {
+                case "Title desc": contr = contr.OrderByDescending(s => s.Title);
+                    break;
+                
+                case "ContractNumber desc": contr = contr.OrderByDescending(s => s.ContractNumber);
+                    break;
+                case "ContractNumber": contr = contr.OrderBy(s => s.ContractNumber);
+                    break;
+
+                case "DateSigned desc": contr = contr.OrderByDescending(s => s.DateSigned);
+                    break;
+                case "DateSigned": contr = contr.OrderBy(s => s.DateSigned);
+                    break;
+
+                case "InputDate desc": contr = contr.OrderByDescending(s => s.InputDate);
+                    break;
+                case "InputDate": contr = contr.OrderBy(s => s.InputDate);
+                    break;
+
+                case "SignedBy desc": contr = contr.OrderByDescending(s => s.SignedBy);
+                    break;
+                case "SignedBy": contr = contr.OrderBy(s => s.SignedBy);
+                    break;
+
+                case "PriceContract desc": contr = contr.OrderByDescending(s => s.PriceContract);
+                    break;
+                case "PriceContract": contr = contr.OrderBy(s => s.PriceContract);
+                    break;
+
+                default: contr = contr.OrderBy(s => s.Title);
+                    break;
+            }
+            return View(contr.ToList());
         }
 
         //

@@ -17,9 +17,40 @@ namespace Asset_Management.Controllers
         //
         // GET: /Provider/
 
-        public ViewResult Index()
+        public ViewResult Index(string SortOrder)
         {
-            return View(db.Providers.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(SortOrder) ? "ProviderName desc" : "";
+            ViewBag.AdressSortParm = SortOrder == "Address" ? "Address desc" : "Address";
+            ViewBag.PhoneSortParm = SortOrder == "Phone" ? "Phone desc" : "Phone";
+            ViewBag.ManagerSortParm = SortOrder == "Manager" ? "Manager desc" : "Manager";
+
+            var prov = from s in db.Providers select s;
+
+            switch (SortOrder)
+            {
+                case "ProviderName desc": prov = prov.OrderByDescending(s => s.ProviderName);
+                    break;
+
+                case "Address desc": prov = prov.OrderByDescending(s => s.Address);
+                    break;
+                case "Address": prov = prov.OrderBy(s => s.Address);
+                    break;
+
+                case "Phone desc": prov = prov.OrderByDescending(s => s.Phone);
+                    break;
+                case "Phone": prov = prov.OrderBy(s => s.Phone);
+                    break;
+
+                case "Manager desc": prov = prov.OrderByDescending(s => s.Manager);
+                    break;
+                case "Manager": prov = prov.OrderBy(s => s.Manager);
+                    break;
+
+                default : prov = prov.OrderBy(s => s.ProviderName);
+                    break;
+            }
+
+            return View(prov.ToList());
         }
 
         //
