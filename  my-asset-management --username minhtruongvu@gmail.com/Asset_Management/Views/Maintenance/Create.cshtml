@@ -1,0 +1,49 @@
+﻿@model Asset_Management.Models.Maintenance
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Maintenance</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PriceMaintenance)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PriceMaintenance)
+            @Html.ValidationMessageFor(model => model.PriceMaintenance)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateMaintenance)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DateMaintenance)
+            @Html.ValidationMessageFor(model => model.DateMaintenance)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NextDateMaintenance)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NextDateMaintenance)
+            @Html.ValidationMessageFor(model => model.NextDateMaintenance)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

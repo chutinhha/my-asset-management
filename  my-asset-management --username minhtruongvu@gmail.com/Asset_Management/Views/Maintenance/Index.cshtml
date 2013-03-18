@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Asset_Management.Models.Maintenance>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            MaintenanceID
+        </th>
+        <th>
+            @Html.ActionLink("PriceMaintenance", "Index", new {sortOrder = ViewBag.PriceMaintenanceSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("DateMaintenance", "Index", new {sortOrder = ViewBag.DateMaintenanceSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("NextDateMaintenance", "Index", new {sortOrder = ViewBag.NextDateMaintenanceSortParm})
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaintenanceID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceMaintenance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateMaintenance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NextDateMaintenance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaintenanceID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaintenanceID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaintenanceID })
+        </td>
+    </tr>
+}
+
+</table>
