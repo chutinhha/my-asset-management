@@ -17,7 +17,7 @@ namespace Asset_Management.Controllers
         //
         // GET: /Provider/
 
-        public ViewResult Index(string SortOrder)
+        public ViewResult Index(string SortOrder, string searchstring)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(SortOrder) ? "ProviderName desc" : "";
             ViewBag.AdressSortParm = SortOrder == "Address" ? "Address desc" : "Address";
@@ -25,6 +25,7 @@ namespace Asset_Management.Controllers
             ViewBag.ManagerSortParm = SortOrder == "Manager" ? "Manager desc" : "Manager";
 
             var prov = from s in db.Providers select s;
+//            var item = from s in db.Providers select s;
 
             switch (SortOrder)
             {
@@ -48,6 +49,11 @@ namespace Asset_Management.Controllers
 
                 default : prov = prov.OrderBy(s => s.ProviderName);
                     break;
+            }
+
+            if (!String.IsNullOrEmpty(searchstring))
+            { 
+            
             }
 
             return View(prov.ToList());
