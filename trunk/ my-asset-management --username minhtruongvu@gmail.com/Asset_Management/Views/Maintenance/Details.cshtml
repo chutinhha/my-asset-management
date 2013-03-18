@@ -1,0 +1,25 @@
+﻿@model Asset_Management.Models.Maintenance
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Maintenance</legend>
+
+    <div class="display-label">PriceMaintenance</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PriceMaintenance)
+    </div>
+
+    <div class="display-label">DateMaintenance</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateMaintenance)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.MaintenanceID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
