@@ -12,7 +12,7 @@ namespace Asset_Management.Models
         public string Title { get; set; }
         public DateTime DateSigned { get; set; }
         public string SignedBy { get; set; }
-        public string PriceContract { get; set; }
+        public decimal PriceContract { get; set; }
         public DateTime InputDate { get; set; }
         public virtual ICollection<Product> Products { get; set; }
         public virtual Provider Provider { get; set; }

@@ -6,8 +6,18 @@
 
 <h2>Create</h2>
 
-<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
-<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@*<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>*@
+
+@*<head>
+  <meta charset="utf-8" />
+  <title>jQuery UI Datepicker - Default functionality</title>*@
+@*  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />*@
+
+
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
@@ -41,9 +51,18 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.DateBuyed)
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.DateBuyed)
-            @Html.ValidationMessageFor(model => model.DateBuyed)
+        <div class="editor-field">                        
+           @* @Html.EditorFor(model => model.DateBuyed)
+            @Html.ValidationMessageFor(model => model.DateBuyed) *@
+
+            @Html.TextBoxFor(x => x.DateBuyed, new { @class = "date" })
+            <script>
+                $(function () {
+                    $('.date').datepicker();
+                    $('.date_expire').datepicker();
+            });
+            </script>
+
         </div>
 
         <div class="editor-label">
@@ -82,8 +101,9 @@
             @Html.LabelFor(model => model.DateExpireMaintenance)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DateExpireMaintenance)
-            @Html.ValidationMessageFor(model => model.DateExpireMaintenance)
+            @*@Html.EditorFor(model => model.DateExpireMaintenance)
+            @Html.ValidationMessageFor(model => model.DateExpireMaintenance)*@
+            @Html.TextBoxFor(x => x.DateExpireMaintenance, new { @class = "date_expire" })
         </div>
 
         <p>
