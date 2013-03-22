@@ -12,3 +12,10 @@ D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gma
 D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\obj\Debug\Asset_Management.dll
 D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\obj\Debug\Asset_Management.pdb
 D:\Minh Truong\Asset Management\ my-asset-management --username minhtruongvu@gmail.com\Asset_Management\obj\Debug\Asset_Management.csprojResolveAssemblyReference.cache
+D:\Data BIDC\Asset Management\Asset_Management\bin\Asset_Management.dll
+D:\Data BIDC\Asset Management\Asset_Management\bin\Asset_Management.pdb
+D:\Data BIDC\Asset Management\Asset_Management\bin\EntityFramework.dll
+D:\Data BIDC\Asset Management\Asset_Management\bin\EntityFramework.xml
+D:\Data BIDC\Asset Management\Asset_Management\obj\Debug\Asset_Management.csprojResolveAssemblyReference.cache
+D:\Data BIDC\Asset Management\Asset_Management\obj\Debug\Asset_Management.dll
+D:\Data BIDC\Asset Management\Asset_Management\obj\Debug\Asset_Management.pdb

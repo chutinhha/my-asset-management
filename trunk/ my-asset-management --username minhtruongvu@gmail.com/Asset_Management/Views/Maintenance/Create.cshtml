@@ -26,16 +26,26 @@
             @Html.LabelFor(model => model.DateMaintenance)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DateMaintenance)
-            @Html.ValidationMessageFor(model => model.DateMaintenance)
+           @* @Html.EditorFor(model => model.DateMaintenance)
+            @Html.ValidationMessageFor(model => model.DateMaintenance)*@
+
+            @Html.TextBoxFor(x => x.DateMaintenance, new { @class = "Date_mt" })
+            <script>
+                $(function () {
+                    $('.Date_mt').datepicker();
+                    $('.Next_Date_mt').datepicker();
+                });
+            </script>
         </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.NextDateMaintenance)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.NextDateMaintenance)
-            @Html.ValidationMessageFor(model => model.NextDateMaintenance)
+            @*@Html.EditorFor(model => model.NextDateMaintenance)
+            @Html.ValidationMessageFor(model => model.NextDateMaintenance)*@
+
+            @Html.TextBoxFor(x => x.NextDateMaintenance, new { @class = "Next_Date_mt" })
         </div>
 
         <p>

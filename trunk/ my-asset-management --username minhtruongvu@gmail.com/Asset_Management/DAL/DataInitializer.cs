@@ -25,31 +25,31 @@ namespace Asset_Management.DAL
             var products = new List<Product> 
             { 
                 new Product {ProductName = "PC core i3", DateBuyed = DateTime.Parse("03-03-2013"), DateExpireMaintenance = DateTime.Parse("03-03-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 110, PriceUnit = "12trieu", Status = "Warranty",SerialNumber = 120320139999},
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 110, PriceUnit = 12000000, Status = "Warranty",SerialNumber = 120320139999},
                 new Product {ProductName = "PC core i5", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintenance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 120, PriceUnit = "14trieu", Status = "Warranty",SerialNumber = 120320139998},
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 120, PriceUnit = 14000000, Status = "Warranty",SerialNumber = 120320139998},
                 new Product {ProductName = "PC core i7", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintenance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 130, PriceUnit = "16trieu", Status = "Warranty",SerialNumber = 120320139997},
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 130, PriceUnit = 16000000, Status = "Warranty",SerialNumber = 120320139997},
                 new Product {ProductName = "Lap", DateBuyed = DateTime.Parse("04-04-2013"), DateExpireMaintenance = DateTime.Parse("04-04-2014"), 
-                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 140, PriceUnit = "20trieu", Status = "out of Warranty",SerialNumber = 120320139996}
+                AcceptBy = "Phan Minh Tai", InputBy = "Thuyvnb", OfficeID = 140, PriceUnit = 20000000, Status = "out of Warranty",SerialNumber = 120320139996}
             };
             products.ForEach(s => context.Products.Add(s));
             context.SaveChanges();
 
             var contracts = new List<Contract>
             {
-                new Contract {DateSigned = DateTime.Parse("02-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD12032013", InputDate = DateTime.Parse("02-03-2013") },
-                new Contract {DateSigned = DateTime.Parse("12-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD13042011", InputDate = DateTime.Parse("02-03-2013") },
-                new Contract {DateSigned = DateTime.Parse("12-03-2013"), PriceContract = "150tr", SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD14052012", InputDate = DateTime.Parse("02-03-2013") }
+                new Contract {DateSigned = DateTime.Parse("02-03-2013"), PriceContract = 150000000, SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD12032013", InputDate = DateTime.Parse("02-03-2013") },
+                new Contract {DateSigned = DateTime.Parse("12-03-2013"), PriceContract = 150000000, SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD13042011", InputDate = DateTime.Parse("02-03-2013") },
+                new Contract {DateSigned = DateTime.Parse("12-03-2013"), PriceContract = 150000000000, SignedBy = "Tran Thanh Dat", Title = "Hop dong mua tranh thiet bi 2013", ContractNumber = "HD14052012", InputDate = DateTime.Parse("02-03-2013") }
             };
             contracts.ForEach(s => context.Contracts.Add(s));
             context.SaveChanges();
 
             var maintenance = new List<Maintenance>
             {
-                new Maintenance {PriceMaintenance = "50 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") },
-                new Maintenance {PriceMaintenance = "35 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") },
-                new Maintenance {PriceMaintenance = "19 tr", DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") }
+                new Maintenance {PriceMaintenance = 50000000, DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") },
+                new Maintenance {PriceMaintenance = 35000000, DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") },
+                new Maintenance {PriceMaintenance = 19000000, DateMaintenance = DateTime.Parse("12-04-2013"), NextDateMaintenance = DateTime.Parse("12-04-2015") }
             };
             maintenance.ForEach(s => context.Maintenances.Add(s));
             context.SaveChanges();
